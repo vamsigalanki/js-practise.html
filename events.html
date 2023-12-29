@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="kl" onkeyup="abc()" placeholder="sarch by name">
+        <br><br/>
+        <table style="border:2px solid ">
+            <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>salary</th>
+        </tr>
+        <tbody id="d1"></tbody>
+        </table>
+        <script>
+         
+            var persons=[{
+                name:"vamsi",
+                age:"23",
+                salary:"5000",
+
+            },{
+                name:"maruthi",
+                age:"21",
+                salary:"1000",
+            },]
+            console.log(persons);
+           console.log();
+          var tbody= document.getElementById("d1");
+                persons.forEach((s) => {
+                    console.log(s)
+                    var tr1=document.createElement("tr");
+                    var td1=document.createElement("td");
+                    var td2=document.createElement("td");
+                    var td3=document.createElement("td");
+                    td1.innerHTML=s.name
+                    td2.innerHTML=s.age
+                    td3.innerHTML=s.salary
+                    tr1.appendChild(td1);
+                    tr1.appendChild(td2);
+                    tr1.appendChild(td3);
+                  tbody.appendChild(tr1);
+                });    
+            
+        </script>
+    </body>
+</html;
